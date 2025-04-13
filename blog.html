@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DungGwong's Blogs</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 自定义样式 */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        .file-list-container {
+            width: 80%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .file-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .file-list li {
+            margin: 10px 0;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .file-list li:hover {
+            background-color: #f1f1f1;
+        }
+        .file-list li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            display: block; /* 使链接占据整个列表项 */
+        }
+        .file-list li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>DungGwong's Blogs</h1>
+    <p>All my blogs are listed here, you can check or download.</p>
+    <h2>Select Files</h2>
+
+    <!-- 文件列表容器 -->
+    <div class="file-list-container">
+        <p>Select a file to view or download:</p>
+        <ul class="file-list">
+            <!-- 使用 target="_blank" 在新标签页打开 PDF -->
+            <li><a href="Survival_Analysis_Report.pdf" target="_blank" download="Survival_Analysis_Report.pdf">Survival_Analysis_Report.pdf</a></li>
+            <!-- 添加更多文件 -->
+        </ul>
+    </div>
+    <!-- 底部图片 -->
+    <img src="sustech.jpg" alt="SUSTech Campus" class="footer-image">
+</body>
+</html>
