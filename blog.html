@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,23 +47,57 @@
         .file-list li a:hover {
             text-decoration: underline;
         }
+        /* 返回按钮样式 */
+        #return-button {
+            position: fixed; /* 固定在视口左上角 */
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            z-index: 1000; /* 确保按钮在最上层 */
+        }
+
+        /* 底部图片样式 */
+        .footer-image {
+            width: 300px; /* 根据需要调整宽度 */
+            height: auto;
+            display: block;
+            margin: 20px auto; /* 水平居中 */
+        }
     </style>
 </head>
-<body>
-    <h1>DungGwong's Blogs</h1>
-    <p>All my blogs are listed here, you can check or download.</p>
-    <h2>Select Files</h2>
 
-    <!-- 文件列表容器 -->
-    <div class="file-list-container">
-        <p>Select a file to view or download:</p>
-        <ul class="file-list">
-            <!-- 使用 target="_blank" 在新标签页打开 PDF -->
-            <li><a href="Survival_Analysis_Report.pdf" target="_blank" download="Survival_Analysis_Report.pdf">Survival_Analysis_Report.pdf</a></li>
-            <!-- 添加更多文件 -->
-        </ul>
-    </div>
-    <!-- 底部图片 -->
-    <img src="sustech.jpg" alt="SUSTech Campus" class="footer-image">
+<body>
+    <button id="return-button">return</button>
+    <header>
+        <h1>DungGwong's Blogs</h1>
+    </header>
+    
+        <div class="file-list-container">
+            <p>Select a file to view or open in a new tab:</p>
+           <h2>Select Files</h2>
+            <ul class="file-list">
+                <li><a href="Survival_Analysis_Report.pdf" target="_blank">Survival_Analysis_Report.pdf</a></li>
+                <li><a href="Spark_Project_1.pdf" target="_blank">Spark_Project_1.pdf</a></li>
+                <li><a href="Spark_Assignment_2.pdf" target="_blank">Spark_Assignment_2.pdf</a></li>
+            </ul>
+        </div>
+        <!-- 底部图片放置在 main 内部，利用 Flexbox 居中 -->
+        <div style="display: flex; justify-content: center; margin-top: 40px;">
+            <img src="sustech.jpg" alt="SUSTech Campus" class="footer-image">
+        </div>
+    
+
+    <script>
+        // 返回按钮点击事件
+        document.getElementById('return-button').addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+    </script>
 </body>
+
 </html>
